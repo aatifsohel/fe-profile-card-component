@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -11,20 +11,25 @@ html {
 }
 
 body {
-  font-family: "Outfit", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.8rem;
+  min-height: 100vh;
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right 45vw bottom 45vh, 45vw 45vh;
+  background-color: hsl(185, 75%, 39%);
+
   display: grid;
   place-content: center;
-  min-height: 100vh;
-  background-color: hsl(185, 75%, 39%);
-  font-size: 1.8rem;
 }
 
 .profile-card {
-  background-color: #fff;
-  width: 40rem;
-  border-radius: 15px;
-  overflow: hidden;
   padding-top: 10rem;
+  max-width: 40rem;
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
 
   display: flex;
   gap: 2.4rem;
@@ -38,12 +43,12 @@ body {
 .profile-card::before {
   content: "";
   width: 100%;
-  height: 16rem;
+  height: 15rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: red;
+
   background-image: url(images/bg-pattern-card.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,23 +76,25 @@ body {
 }
 
 .username {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
   color: hsl(229, 23%, 23%);
 }
 
 .age {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: hsl(227, 10%, 46%);
 }
 
 .address {
+  font-size: 1.5rem;
   color: hsl(227, 10%, 46%);
 }
 
 .stats {
   padding: 2.4rem 4.8rem;
-  border-top: 0.5px solid hsl(0, 0%, 59%);
+  border-top: 0.5px solid hsl(0deg 0% 59% / 20%);
+  width: 100%;
 
   display: flex;
   gap: 4.8rem;
@@ -104,14 +111,14 @@ body {
 }
 
 .stats-items span {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
   color: hsl(229, 23%, 23%);
 }
 
 .stats-items p {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: 2px;
   color: hsl(227, 10%, 46%);
 }
 
@@ -119,12 +126,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
-  /* 
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, -50%); */
-  display: none;
+  transform: translate(0, 25vh);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
